@@ -1,0 +1,25 @@
+{% extends  'base.html' %}
+
+{% block title %} Tasks {% endblock %}
+
+{% block body %}
+    <form method="POST">
+        <div class="mb-3">
+            <label for="task" class="form-label">Task</label>
+            <input type="text" value="{{task.task}}" name="task" class="form-control" id="task" aria-describedby="task">
+          </div>
+          <div class="mb-3">
+            <label for="due" class="form-label">Due Date</label>
+            <input type="date" value="{{task.due_date}}" name="due" class="form-control" id="due">
+            <div id="dueHelp" class="form-text">Original due date was {{task.due_date}}</div>
+          </div>
+          <div class="mb-3">
+              <label for="status" class="form-label">Status</label>
+              <select class="form-select" name="status" value="{{task.status}}" aria-label="Default select example">
+                <option value="In Progress">In Progress</option>
+                <option value="Completed">Completed</option>
+              </select>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+{% endblock %}

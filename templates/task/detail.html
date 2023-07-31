@@ -1,0 +1,13 @@
+{% extends  'base.html' %}
+
+{% block title %} Tasks {% endblock %}
+
+{% block body %}
+    Task Number: {{task.task_no}}<br>
+    Name: {{task.task}}<br>
+    Due Date: {{task.due_date}}<br>
+    Created On: {{task.created_date}}<br>
+    Status: {{task.status}}<br>
+    Assignee: {{task.assignee_id}}<br>
+    Assignor: {{task.assignor_id}}<br>
+{% endblock %}
